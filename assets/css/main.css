@@ -1,0 +1,433 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,300,600,500,900,700,800);
+html,
+button,
+input,
+select,
+textarea {
+    color: #343434;
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.4;
+}
+html,
+body,
+.wrapper,
+.wHolder{
+    width: 100%;
+    height: 100%;
+    font-family: 'Raleway';
+}
+
+::-moz-selection {
+    background: #fc4a65;
+    color: #fff;
+    text-shadow: none;
+}
+
+::selection {
+    background: #fc4a65;
+    color: #fff;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+.wrapper{
+    padding: 20px;
+    background: url('../img/bg.jpg') center center;
+    background-size: cover;
+
+    box-sizing: border-box;
+
+    display: none;
+}
+.box{
+    background: #fff;
+    box-shadow: 0 -2px 7px -1px rgba(0,0,0,0.22);
+    box-sizing: border-box;
+}
+.wrapper .header{
+    width: 100%;
+    height: 52px;
+    margin-bottom: 20px;
+}
+.wrapper .header .mobileNavigation{
+    height: 52px;
+    float: left;
+    padding: 0px 20px;
+    display: none;
+}
+.wrapper .header .mobileNavigation ul{
+    padding: 0;
+}
+.wrapper .header .mobileNavigation ul li{
+    display: inline-block;
+    margin: 0 10px;
+    cursor: pointer;
+}
+.mobile .wrapper .header .mobileNavigation{
+    display: block;
+}
+.wrapper .header h1{
+    float: left;
+    display: inline-block;
+    height: 52px;
+    border-left: 5px solid;
+    margin: 0;
+    padding: 0 0 0 15px;
+    line-height: 52px;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 400;
+    color: #909090;
+}
+.wrapper .header .userMenu{
+    float: right;
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+.wrapper .header .userMenu li{
+    display: inline;
+    margin-right: 18px;
+}
+.wrapper .header .userMenu li a{
+    color: #909090;
+    text-decoration: none;
+    font-size: 14px;
+}
+.wrapper .header .userMenu li a span i{
+    font-size: 16px;
+}
+.wrapper .content{
+    width: 100%;
+    position: relative;
+}
+.wrapper .sidebar{
+    width: 325px;
+    height: 100%;
+    float: left;
+    position: absolute;
+    z-index: 10;
+}
+.wrapper .sidebar .sidebarHeader{
+    width: 100%;
+    height: 52px;
+    border-bottom: 1px solid #f8f8f8;
+}
+.wrapper .sidebar .sidebarHeader h2{
+    display: inline-block;
+    height: 52px;
+    float: left;
+    padding: 0 0 0 15px;
+    border-left: 5px solid;
+    margin: 0;
+    line-height: 52px;
+    color: #909090;
+    font-weight: 400;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+.wrapper .sidebar .sidebarHeader .videoCtrl{
+    float: right;
+    list-style: none;
+    padding: 0;
+    margin: 0 28px 0 0;
+}
+.wrapper .sidebar .sidebarHeader .videoCtrl li{
+    height: 26px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.wrapper .sidebar .sidebarHeader .videoCtrl li:hover{
+    opacity: 0.7;
+}
+.wrapper .sidebar .sidebarHeader .videoCtrl li i{
+    font-size: 28px;
+}
+.wrapper .sidebar .videoList{
+    overflow: hidden;
+    position: relative;
+}
+.wrapper .sidebar .videoList ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    left: 0;
+}
+.wrapper .sidebar .videoList ul li{
+    height: 42px;
+    cursor: pointer;
+}
+.wrapper .sidebar .videoList ul li:hover{
+    background: rgba(139, 167, 124, 0.78);
+}
+.wrapper .sidebar .videoList ul li span.status{
+    width: 44px;
+    float: left;
+    text-align: center;
+    line-height: 41px;
+    display: block;
+    box-sizing: border-box;
+    border-bottom: 1px solid #fff;
+}
+.wrapper .sidebar .videoList ul li span.status i{
+    color: #ccc;
+}
+.wrapper .sidebar .videoList ul li:hover span.status i,
+.wrapper .sidebar .videoList ul li.active span.status i{
+    color: #fff;
+}
+.wrapper .sidebar .videoList ul li span.name{
+    float: left;
+    height: 42px;
+    border-left: 1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea;
+    line-height: 42px;
+    box-sizing: border-box;
+    display: block;
+    width: 206px;
+    padding-left: 10px;
+    font-size: 16px;
+    color: #909090;
+    overflow: hidden;
+}
+.wrapper .sidebar .videoList ul li:hover span.name,
+.wrapper .sidebar .videoList ul li.active span.name{
+    color: #fff;
+}
+.wrapper .sidebar .videoList ul li span.timing{
+    float: left;
+    height: 42px;
+    border-bottom: 1px solid #eaeaea;
+    box-sizing: border-box;
+    display: block;
+    width: 75px;
+}
+.wrapper .sidebar .videoList ul li span.timing span{
+    width: 50px;
+    height: 22px;
+    display: block;
+    border-radius: 3px;
+    color: #fff;
+    margin: 10px auto;
+    text-align: center;
+    font-size: 16px;
+    line-height: 22px;
+/*
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+*/
+}
+.wrapper .sidebar .videoList ul li:hover span.timing span,
+.wrapper .sidebar .videoList ul li.active span.timing span{
+    background: #fff;
+    color: #8ba77c;
+}
+
+.wrapper .content .container{
+    height: 100%;
+    float: right;
+}
+.wrapper .content .container .videoHolder{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
