@@ -6,7 +6,7 @@ function calc() {
     master.window.width = $(window).width();
 
     $content = master.window.height;
-    $container = master.window.width - 325;
+    $container = master.window.width - 250;
     $videoList = $content - 52;
 
     if (master.window.width >= 950) {
@@ -14,9 +14,9 @@ function calc() {
         $('body').removeClass('mobile');
         $('.sidebar').show();
     } else if (master.window.width < 950) {
-        $('.container').width('100%');
-        $('body').addClass('mobile');
-        $('.sidebar').hide();
+//        $('.container').width('100%');
+//        $('body').addClass('mobile');
+//        $('.sidebar').hide();
 
     }
     $('.content').height($content);
@@ -37,21 +37,23 @@ function actions() {
 
     $('.videoList>ul>li').each(function() {
         var id = $(this).data('hash'),
-            timer = $(this).find('.timing span'),
             titler = $(this).find('.name'),
+            theIndex = $(this).index() + 1,
+            thisData = $(this),
             ytapiurl    = 'http://gdata.youtube.com/feeds/api/videos/' + id + '?alt=json';
+//            timer = $(this).find('.timing span'),
 
         $.getJSON(ytapiurl, function(data) {
-            var time = formatSecondsAsTime(data['entry']['media$group']['media$content'][0]['duration']);
+//            var time = formatSecondsAsTime(data['entry']['media$group']['media$content'][0]['duration']);
             var title = data['entry']['media$group']['media$title']['$t'];
+            thisData.data('name', title)
 
-            timer.text(time);
-            titler.text(title.replace('Você Não Sabia? - ', ''));
+//            timer.text(time);
+            titler.text(theIndex + '. ' + title.replace('Você Não Sabia? - ', ''));
         });
 
         $(this).removeClass('invisible');
         $(this).addClass('fadeInUp animated');
-
 
         var elVideoID = $(this).data('hash');
         if ($(this).hasClass('current')) {
@@ -76,6 +78,7 @@ function actions() {
             $('.videoList>ul>li').removeClass('active');
             $(this).addClass('active');
             var videoID = $(this).data('hash');
+            var videoName = $(this).data('name');
             putItOnDOM(videoID);
         }
     });
@@ -152,15 +155,15 @@ function putItOnDOM(theVideoId) {
 function startScroller() {
     var itemsL = $('#scrollerMenu li').length * 42,
         videoListHeight = $('.videoList').height();
-    if (itemsL < videoListHeight) {
-        $('.videoCtrl').hide();
-    } else {
-        $('.videoCtrl').show();
-        $('.videoCtrl #up').css('opacity','0.3');
-        $('#scrollerMenu').css({
-            top: 0
-        });
-    }
+//    if (itemsL < videoListHeight) {
+//        $('.videoCtrl').hide();
+//    } else {
+//        $('.videoCtrl').show();
+//        $('.videoCtrl #up').css('opacity','0.3');
+//        $('#scrollerMenu').css({
+//            top: 0
+//        });
+//    }
 }
 function nextItem() {
     var someTop = $('#scrollerMenu').css('top').replace('px','');

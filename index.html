@@ -29,7 +29,7 @@
                             <h2>
                                 Nome do Curso
                             </h2>
-                            <ul class="videoCtrl">
+                            <ul class="videoCtrl" style="display: none;">
                                 <li id="up">
                                     <i class="fa fa-caret-up"></i>
                                 </li>
@@ -57,7 +57,7 @@
                                         </span>
                                     </span>
                                 </li>
-                                <li data-hash="4qsDsQGczcA" class="invisible">
+                                <li data-hash="4qsDsQGczcA" data-name="" class="invisible">
                                     <a>
                                         <span class="status">
                                             <i class="fa fa-eye"></i>
@@ -74,7 +74,7 @@
                                         </span>
                                     </span>
                                 </li>
-                                <li data-hash="M-rZLRqG4Bc" class="invisible">
+                                <li data-hash="M-rZLRqG4Bc" data-name="" class="invisible">
                                     <a>
                                         <span class="status">
                                             <i class="fa fa-eye"></i>
@@ -91,7 +91,7 @@
                                         </span>
                                     </span>
                                 </li>
-                                <li data-hash="hlVrnb4D1qI" class="invisible">
+                                <li data-hash="hlVrnb4D1qI" data-name="" class="invisible">
                                     <a>
                                         <span class="status">
                                             <i class="fa fa-eye"></i>
@@ -108,7 +108,7 @@
                                         </span>
                                     </span>
                                 </li>
-                                <li data-hash="bA_KNaT2gY8" class="invisible">
+                                <li data-hash="bA_KNaT2gY8" data-name="" class="invisible">
                                     <a>
                                         <span class="status">
                                             <i class="fa fa-eye"></i>
@@ -125,7 +125,7 @@
                                         </span>
                                     </span>
                                 </li>
-                                <li data-hash="pYjTWRqknNI" class="invisible">
+                                <li data-hash="pYjTWRqknNI" data-name="" class="invisible">
                                     <a>
                                         <span class="status">
                                             <i class="fa fa-eye"></i>
@@ -142,7 +142,7 @@
                                         </span>
                                     </span>
                                 </li>
-                                <li data-hash="JM6fCceugDc" class="invisible">
+                                <li data-hash="JM6fCceugDc" data-name="" class="invisible">
                                     <a>
                                         <span class="status">
                                             <i class="fa fa-eye"></i>
@@ -280,38 +280,42 @@
                                 </li>
 
                             </ul>
+                            what if im outside?
                         </div>
                     </div>
                     <div class="container">
-                        <div class="header clearfix">
-                            <ul class="userMenu">
-                                <li>
-                                    <a href="../escoladosucesso-user-area/">
-                                        Página Inicial
-                                        <span>
-                                            <i class="fa fa-home"></i>
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        Perfil
-                                        <span>
-                                            <i class="fa fa-user" alt="marcar como visto"></i>
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="../escoladosucesso-user-login/">
-                                        Sair
-                                        <span>
-                                            <i class="fa fa-sign-out"></i>
-                                        </span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="videoHolder">
+                        <div class="inside clearfix">
+                            <div class="header clearfix">
+                                <ul class="userMenu">
+                                    <li>
+                                        <a href="../escoladosucesso-user-area/">
+                                            Página Inicial
+                                            <span>
+                                                <i class="fa fa-home"></i>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Perfil
+                                            <span>
+                                                <i class="fa fa-user" alt="marcar como visto"></i>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../escoladosucesso-user-login/">
+                                            Sair
+                                            <span>
+                                                <i class="fa fa-sign-out"></i>
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <h2>Nome do vídeo</h2>
+                            <div class="videoHolder">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -329,7 +333,7 @@
 
     <script type="text/javascript">
         var myScroll;
-        function loadedd () {
+        function loaded () {
             myScroll = new IScroll('#videoList', {
                 scrollbars: true,
                 mouseWheel: true,

@@ -77,11 +77,12 @@ textarea {
     box-sizing: border-box;
 
     display: none;
+    overflow-y: auto;
 }
 .box{
-    background: #fff;
-    box-shadow: 0 -2px 7px -1px rgba(0,0,0,0.22);
+    box-shadow: 0 -2px 7px -1px rgba(0,0,0,0.82) inset;
     box-sizing: border-box;
+    background: rgba(0,0,0,0.5);
 }
 .wrapper .header{
     width: 100%;
@@ -128,7 +129,7 @@ textarea {
     margin-right: 18px;
 }
 .wrapper .header .userMenu li a{
-    color: #909090;
+    color: #fff;
     text-decoration: none;
     font-size: 14px;
 }
@@ -140,7 +141,7 @@ textarea {
     position: relative;
 }
 .wrapper .sidebar{
-    width: 325px;
+    width: 250px;
     height: 100%;
     float: left;
     position: fixed;
@@ -151,15 +152,15 @@ textarea {
     height: 52px;
     border-bottom: 1px solid #f8f8f8;
 }
-.wrapper .sidebar .sidebarHeader h2{
+.wrapper h2{
     display: inline-block;
     height: 52px;
     float: left;
     padding: 0 0 0 15px;
-    border-left: 5px solid;
+    border-left: 0 none;
     margin: 0;
     line-height: 52px;
-    color: #909090;
+    color: #fff;
     font-weight: 400;
     font-size: 18px;
     text-transform: uppercase;
@@ -211,6 +212,7 @@ textarea {
     display: block;
     box-sizing: border-box;
     border-bottom: 1px solid #fff;
+    display: none;
 }
 .wrapper .sidebar .videoList ul li span.status i{
     color: #ccc;
@@ -222,16 +224,18 @@ textarea {
 .wrapper .sidebar .videoList ul li span.name{
     float: left;
     height: 35px;
-    border-left: 1px solid #eaeaea;
-    border-bottom: 1px solid #eaeaea;
+    border-left: 0 none;
+    border-bottom: 1px solid #8e8e8e;
+    border-top: 1px solid #000;
     line-height: 35px;
     box-sizing: border-box;
     display: block;
-    width: 206px;
+    width: 250px;
     padding-left: 10px;
     font-size: 13px;
-    color: #909090;
+    color: #fff;
     overflow: hidden;
+
 }
 .wrapper .sidebar .videoList ul li:hover span.name,
 .wrapper .sidebar .videoList ul li.active span.name{
@@ -244,6 +248,7 @@ textarea {
     box-sizing: border-box;
     display: block;
     width: 75px;
+    display: none;
 }
 .wrapper .sidebar .videoList ul li span.timing span{
     width: 50px;
@@ -279,6 +284,10 @@ textarea {
 }
 
 
+.wrapper .content .container .inside{
+    width: 720px;
+    margin: 0 auto;
+}
 
 
 
