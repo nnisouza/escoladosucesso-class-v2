@@ -71,7 +71,6 @@ textarea {
    ========================================================================== */
 
 .wrapper{
-    padding: 20px;
     background: url('../img/bg.jpg') center center;
     background-size: cover;
 
@@ -86,8 +85,7 @@ textarea {
 }
 .wrapper .header{
     width: 100%;
-    height: 52px;
-    margin-bottom: 20px;
+    height: 53px;
 }
 .wrapper .header .mobileNavigation{
     height: 52px;
@@ -145,7 +143,7 @@ textarea {
     width: 325px;
     height: 100%;
     float: left;
-    position: absolute;
+    position: fixed;
     z-index: 10;
 }
 .wrapper .sidebar .sidebarHeader{
@@ -199,7 +197,7 @@ textarea {
     left: 0;
 }
 .wrapper .sidebar .videoList ul li{
-    height: 42px;
+    height: 35px;
     cursor: pointer;
 }
 .wrapper .sidebar .videoList ul li:hover{
@@ -209,7 +207,7 @@ textarea {
     width: 44px;
     float: left;
     text-align: center;
-    line-height: 41px;
+    line-height: 34px;
     display: block;
     box-sizing: border-box;
     border-bottom: 1px solid #fff;
@@ -223,15 +221,15 @@ textarea {
 }
 .wrapper .sidebar .videoList ul li span.name{
     float: left;
-    height: 42px;
+    height: 35px;
     border-left: 1px solid #eaeaea;
     border-bottom: 1px solid #eaeaea;
-    line-height: 42px;
+    line-height: 35px;
     box-sizing: border-box;
     display: block;
     width: 206px;
     padding-left: 10px;
-    font-size: 16px;
+    font-size: 13px;
     color: #909090;
     overflow: hidden;
 }
@@ -241,7 +239,7 @@ textarea {
 }
 .wrapper .sidebar .videoList ul li span.timing{
     float: left;
-    height: 42px;
+    height: 35px;
     border-bottom: 1px solid #eaeaea;
     box-sizing: border-box;
     display: block;
@@ -277,7 +275,7 @@ textarea {
 }
 .wrapper .content .container .videoHolder{
     width: 100%;
-    height: 100%;
+/*    height: 100%;*/
 }
 
 

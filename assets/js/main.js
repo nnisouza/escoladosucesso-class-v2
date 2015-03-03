@@ -5,8 +5,8 @@ function calc() {
     master.window.height = $(window).height();
     master.window.width = $(window).width();
 
-    $content = master.window.height - 112;
-    $container = master.window.width - 385;
+    $content = master.window.height;
+    $container = master.window.width - 325;
     $videoList = $content - 52;
 
     if (master.window.width >= 950) {
@@ -142,7 +142,7 @@ function actions() {
 
 function putItOnDOM(theVideoId) {
     $('.container .videoHolder').fadeOut('medium', function() {
-                $('.container .videoHolder').html('<iframe id="mainVideo" width="100%" height="100%" src="https://www.youtube.com/embed/' + theVideoId + '?autoplay=1&showinfo=0" frameborder="0" allowfullscreen></iframe>');
+                $('.container .videoHolder').html('<iframe id="mainVideo" width="100%" height="385" src="https://www.youtube.com/embed/' + theVideoId + '?autoplay=0&showinfo=0" frameborder="0" allowfullscreen></iframe>');
                 setTimeout(function() {
                     $('.container .videoHolder').fadeIn('medium');
                 }, 400)
